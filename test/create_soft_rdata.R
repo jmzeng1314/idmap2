@@ -1,11 +1,10 @@
-load('p2s_df_from_soft.Rdata')
-head(p2s_df)
-tmp=split(p2s_df,p2s_df$gpl)
-names(tmp)
-head(tmp[[1]])
-ns=lapply(tmp, function(x){
+load('~/Documents/GPL/p2s_list_from_soft.Rdata')
+length(p2s_list)
+names(p2s_list)
+head(p2s_list[[1]])
+ns=lapply(p2s_list, function(x){
   # x=tmp[[1]]
-  ids=x[,1:2]
+  ids=x[,-3]
   assign(x[1,3],ids, envir = .GlobalEnv)
  return(as.name(x[1,3]))
 })
