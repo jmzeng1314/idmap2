@@ -1,6 +1,6 @@
 Package: idmap2
 Type: Package
-Title: get the gene symbols of probes in GEO database
+Title: get the gene symbols of probes in GEO database by soft files
 Version: 0.1.0
 Author: jianming zeng 
 Maintainer: jianming zeng  <jmzeng1314@163.com>

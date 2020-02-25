@@ -5,12 +5,13 @@ head(p2s_list[[1]])
 ns=lapply(p2s_list, function(x){
   # x=tmp[[1]]
   ids=x[,-3]
-  assign(x[1,3],ids, envir = .GlobalEnv)
- return(as.name(x[1,3]))
+  y=paste0(x[1,3],'_soft')
+  assign(y,ids, envir = .GlobalEnv)
+  return(as.name(y))
 })
 ns
 library(usethis)
-do.call("use_data",ns )
+do.call("use_data",ns)
 # https://stackoverflow.com/questions/1236620/global-variables-in-r
 # https://stackoverflow.com/questions/49673667/how-to-use-devtoolsuse-data-on-a-list-of-data-frames
 
